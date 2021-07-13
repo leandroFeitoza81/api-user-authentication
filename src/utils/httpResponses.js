@@ -1,6 +1,7 @@
 module.exports = {
   INVALID_DATA: {
     message: "Dados Inválidos. Tente novamente.",
+    code: "409",
     error: true,
   },
   EMAIL_ALREADY_EXISTS: {

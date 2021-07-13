@@ -13,13 +13,13 @@ userRouter.post("/", async (req, res, next) => {
     const { name, email, password } = req.body;
     const user = await Service.createUser(name, email, password);
 
-    if (user.erro) {
-      return res.status(404).json(user);
+    if (user.error) {
+      return res.status(user.code).json(user.message);
     }
     return res.status(201).json({ message: "Usuário criado com sucesso" });
   } catch (error) {
     console.log(error);
-    return next({ erro: "Ta no next" });
+    return next({ error });
   }
 });
 
