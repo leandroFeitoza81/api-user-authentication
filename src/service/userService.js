@@ -1,6 +1,6 @@
-const Model = require("../model/usersModel");
-const httpResponses = require("../utils/httpResponses");
-const valid = require("../utils/validationsEntries");
+const Model = require('../model/usersModel');
+const httpResponses = require('../utils/httpResponses');
+const valid = require('../utils/validationsEntries');
 
 const createUser = async (name, email, password) => {
   if (
