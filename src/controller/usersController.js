@@ -12,7 +12,6 @@ userRouter.post('/', async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
     const user = await Service.createUser(name, email, password);
-
     if (user.error) {
       return res.status(user.code).json(user.message);
     }
