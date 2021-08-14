@@ -8,13 +8,13 @@ const userController = require('./controller/usersController');
 
 app.use(express.json());
 
-app.use('/user', userController);
+app.use('/users', userController);
 
 app.get('/', (_req, res) => res.send('Bem vindo!!!'));
 
 app.use(error);
 
-app.all('*', (req, res) => {
+app.all('*', (_req, res) => {
   res.status(404).json({ message: 'Servidor não encontrado!' });
 });
 

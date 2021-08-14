@@ -10,9 +10,7 @@ const createUser = async (name, email, password) => {
   ) {
     return httpResponses.INVALID_DATA;
   }
-
   const userCreated = await Model.createUser(name, email, password);
-
   return userCreated;
 };
 
